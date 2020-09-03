@@ -22,7 +22,7 @@ namespace TestTask
             driver.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(5));
         }
         
-        [Test, Order(1)]
+        [Test]
         public void VerifyPriceLessThan20000()
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
@@ -37,34 +37,21 @@ namespace TestTask
             driver.FindElement(Page.MemoryAmount).Click();
             driver.FindElement(Page.LowestPrice).Click();
 
-            var price = driver.FindElement(Page.ProductPrice).GetAttribute("innerText");
-
             var prices = driver.FindElements(Page.ProductPrice);
 
             List<string> productPrices = prices.Select(p => p.GetAttribute("innerText")).ToList();
 
-            foreach (var item in productPrices)
+            foreach (var productPrice in productPrices)
             {
-                int num = Int32.Parse(item);
+                int num = Int32.Parse(productPrice);
+                //Check weather product price less than 20000
                 Assert.LessOrEqual(num, 20000);
             }
 
             watch.Stop();
-            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
+            Console.WriteLine($"Test execution time: {watch.ElapsedMilliseconds} ms");
         }
         
-        /*
-        [Test, Order(2)]
-        public async System.Threading.Tasks.Task GetFilmsByNameAsync()
-        {
-            var url = "https://swapi.dev/api/people/1/";
-            using var client = new HttpClient();
-
-            var response = await client.GetAsync(url);
-            string responseBody = await response.Content.ReadAsStringAsync();   
-        }
-        */
-
         public static class Page 
         {
             public static By Apple = By.XPath("//label[@for='Apple']");
