@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vladyslav\\source\\repos\\TestTask\\AdmixerTask\\TestTask\\TestTask.csproj": {}
+    "C:\\Users\\Vladyslav\\source\\repos\\TestTaskNew\\AdmixerTask\\TestTask\\TestTask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vladyslav\\source\\repos\\TestTask\\AdmixerTask\\TestTask\\TestTask.csproj": {
+    "C:\\Users\\Vladyslav\\source\\repos\\TestTaskNew\\AdmixerTask\\TestTask\\TestTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vladyslav\\source\\repos\\TestTask\\AdmixerTask\\TestTask\\TestTask.csproj",
+        "projectUniqueName": "C:\\Users\\Vladyslav\\source\\repos\\TestTaskNew\\AdmixerTask\\TestTask\\TestTask.csproj",
         "projectName": "TestTask",
-        "projectPath": "C:\\Users\\Vladyslav\\source\\repos\\TestTask\\AdmixerTask\\TestTask\\TestTask.csproj",
+        "projectPath": "C:\\Users\\Vladyslav\\source\\repos\\TestTaskNew\\AdmixerTask\\TestTask\\TestTask.csproj",
         "packagesPath": "C:\\Users\\Vladyslav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vladyslav\\source\\repos\\TestTask\\AdmixerTask\\TestTask\\obj\\",
+        "outputPath": "C:\\Users\\Vladyslav\\source\\repos\\TestTaskNew\\AdmixerTask\\TestTask\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -48,6 +48,10 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[3.17.0, )"
+            },
+            "RestClient": {
+              "target": "Package",
+              "version": "[3.0.0.21, )"
             },
             "RestSharp": {
               "target": "Package",
