@@ -48,7 +48,7 @@ namespace TestTask
 
             foreach (var productPrice in productPrices)
             {
-                int num = Int32.Parse(productPrice);
+                decimal num = Decimal.Parse(productPrice);
                 //Check weather product price less than 20000
                 Assert.LessOrEqual(num, 20000);
             }
